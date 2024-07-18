@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Array Sorting</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let arr = [15, 10, 48, 24, 30, 11, 7, 2];
+
+        function outer(Array, i) {
+
+            if (i < Array.length) {
+                inner(Array, i, (i + 1));
+                function inner(Array, i, j) {
+                    if (j < Array.length) {
+                        if (Array[i] > Array[j]) {
+
+                            let temp = Array[i];
+                            Array[i] = Array[j];
+                            Array[j] = temp;
+
+                        }
+                        j++;
+                        inner(Array, i, j);
+                    }
+                }
+                i++;
+                outer(Array, i);
+            }
+        }
+
+        outer(arr, 0);
+        console.log(arr);
+
+    </script>
+
+</body>
+
+</html>

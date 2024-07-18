@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Print</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let end = prompt('Enter ending point');
+
+        function demo(num, endpoint) {
+            if (num <= endpoint) {
+                console.log(num);
+                let plus_num = num + 1;
+                demo(plus_num, endpoint);
+            }
+        }
+
+        demo(1, end);
+
+    </script>
+
+</body>
+
+</html>

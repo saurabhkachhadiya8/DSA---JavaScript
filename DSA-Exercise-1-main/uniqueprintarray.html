@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate delete / Unique print</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        let arr1 = [1, 2, 3, 2, 3, 6, 7, 2, 9];
+        let ans1 = []
+
+        for (let i = 0; i < arr1.length; i++) {
+            let duplicate = true;
+            for (let j = i+1; j < arr1.length; j++) {
+                if (arr1[i] == arr1[j]) {
+                    duplicate = false;
+                    break;
+                }
+            }
+            if (duplicate) {
+                ans1.push(arr1[i])
+            }
+        }
+        console.log(ans1);
+    </script>
+
+</body>
+</html>

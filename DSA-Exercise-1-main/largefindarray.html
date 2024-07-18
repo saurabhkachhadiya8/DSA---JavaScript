@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second large</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        console.log('using sorting method & after use splice function');
+
+        let arr1 = [3, 12, 10, 8, 7];
+        console.log(arr1);
+
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] > arr1[j]) {
+                    let temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
+                }
+            }
+        }
+        console.log('Second Max :- ' + arr1.splice(-2, 1));
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('using for loop & after direct print value');
+
+        let arr2 = [3, 12, 10, 8, 7];
+        console.log(arr2);
+        let large_2,large;
+
+        for (let i = 0; i < arr2.length; i++) {
+            for (let j = i + 1; j < arr2.length; j++) {
+                if(arr2[i] > arr2[j]){
+                    large_2 = arr2[j]
+                    arr2[j] = arr2[i]
+                    arr2[i] = large_2
+                }
+                large = arr2[j]
+            }
+        }
+        console.log('Max :- ' + large);
+        console.log('Second Max :- ' + large_2);
+    </script>
+
+
+</body>
+
+</html>

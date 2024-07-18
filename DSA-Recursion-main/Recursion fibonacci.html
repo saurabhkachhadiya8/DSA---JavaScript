@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Fibonacci</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let number = prompt('Enter length of numbers');
+        let arr = [];
+
+        function demo(count, user_num, first_num, second_num) {
+
+            if (count <= user_num) {
+
+                arr.push(first_num);
+                console.log(first_num);
+                
+                let sum = first_num + second_num;
+                first_num = second_num;
+                second_num = sum;
+
+                count++;
+                demo(count, user_num, first_num, second_num);
+
+            }
+
+        }
+
+        demo(1, number, 0, 1);
+        console.log(arr);
+
+    </script>
+
+</body>
+
+</html>

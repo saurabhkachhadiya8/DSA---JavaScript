@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert / .push / .unshift</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let arr1 = [10, 20, 30, 40, 50];
+        let value1 = 25;
+        let pos1 = 2;
+
+        for(let i=arr1.length-1;i>=pos1;i--){
+            arr1[i+1] = arr1[i]
+        }
+        arr1[pos1] = value1
+        console.log(arr1);
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('using splice function');
+
+        let arr2 = [10, 20, 30, 40, 50];
+        let value2 = 25;
+        arr2.splice(2,0,value2)
+        console.log(arr2);
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('using push function');
+
+        let arr3 = [10, 20, 30, 40, 50];
+        let value3 = 60;
+
+        arr3.push(value3)
+        console.log(arr3);
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('using unshift function');
+
+        let arr4 = [10, 20, 30, 40, 50];
+        let value4 = 0;
+
+        arr4.unshift(value4)
+        console.log(arr4);
+    </script>
+
+</body>
+
+</html>

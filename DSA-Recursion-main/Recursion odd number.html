@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion odd number</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let end = prompt('Enter ending point');
+        let arr = [];
+
+        function demo(num, endpoint) {
+            if (num <= endpoint) {
+                if (num % 2 != 0) {
+                    arr.push(num);
+                }
+                let plus_num = num + 1;
+                demo(plus_num, endpoint);
+            }
+        }
+
+        demo(1, end);
+        console.log(arr);
+
+        let arr1 = [];
+
+        function odd_num(num, endpoint) {
+            if (num > endpoint) {
+                return;
+            }
+            if (num % 2 == 1) {
+                arr1.push(num);
+            }
+            let plus_num = num + 1;
+            odd_num(plus_num, endpoint);
+        }
+
+        odd_num(1, end);
+        console.log(arr1);
+
+    </script>
+
+</body>
+
+</html>

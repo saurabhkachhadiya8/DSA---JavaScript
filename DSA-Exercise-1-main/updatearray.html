@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let arr1 = [10, 20, 30, 40, 50];
+        let value1 = 25;
+        let pos1 = 2;
+
+        arr1[pos1] = value1
+        console.log(arr1);
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('using splice function');
+
+        let arr2 = [10, 20, 30, 40, 50];
+        let value2 = 25;
+        arr2.splice(2,0,value2)
+        console.log(arr2);
+        console.log('\n');
+    </script>
+
+</body>
+
+</html>

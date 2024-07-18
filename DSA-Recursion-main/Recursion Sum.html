@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Sum</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let end = prompt('Enter ending point');
+        let sum = 0;
+        let arr = [];
+
+        function demo(num, endpoint) {
+            if (num <= endpoint) {
+                arr.push(num);
+                sum += num;
+                let plus_num = num + 1;
+                demo(plus_num, endpoint);
+            }
+        }
+
+        demo(1, end);
+        console.log(arr);
+        console.log(`Sum = ${sum}`);
+
+    </script>
+
+</body>
+
+</html>

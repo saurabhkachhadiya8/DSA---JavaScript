@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linkedList crud</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        class Node{
+            constructor(val){
+                this.data = val;
+                this.next = null;
+            }
+            
+        }
+
+        class LinkedList{
+            constructor(){
+                this.head = null;
+            }
+
+            addlist(data){
+                let newnode = new Node(data);
+
+                if(!this.head){
+                    this.head = newnode;
+                    return
+                }
+
+                let current = this.head;
+                while(current.next){
+                    current = current.next;
+                }
+                current.next = newnode;
+            }
+
+            printlist(){
+                let current = this.head;
+                console.log(current);
+                while(current){
+                    console.log(current.data);
+                    current = current.next;
+                }
+            }
+
+            deletelist(index){
+                let current = this.head;
+                for(let i=0;i<index-1;i++){
+                    current = current.next;
+                }
+                current.next = current.next.next;
+            }
+
+            updatelist(index,value){
+                let current = this.head;
+                for(let i=0;i<index;i++){
+                    current = current.next;
+                }
+                current.data = value;
+            }
+        }
+        const linkedlist = new LinkedList();
+        linkedlist.addlist(11);
+        linkedlist.addlist(12);
+        linkedlist.addlist(13);
+        linkedlist.addlist(14);
+        linkedlist.addlist(15);
+
+        console.log("Read Node :");
+        linkedlist.printlist();
+
+        console.log("\nDelete Node :");
+        linkedlist.deletelist(2);
+        linkedlist.printlist();
+
+        console.log("\nUpdate Node:");
+        linkedlist.updatelist(2,13);
+        linkedlist.updatelist(3,14);
+        linkedlist.printlist();
+    </script>
+
+</body>
+</html>
