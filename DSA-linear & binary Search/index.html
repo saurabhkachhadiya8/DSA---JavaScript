@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear & binary Search</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        // linear search
+
+        function LinearSearch(arr,search) {
+            for (let i = 0; i <= arr.length - 1; i++) {
+                if (arr[i] === search) {
+                    console.log(`value :- ${arr[i]}\nindex :- ${i}`);
+                }
+            }
+        }
+
+        let L_Arr = [10, 50, 90, 70, 30, 40];
+        let L_Search = 70;
+        LinearSearch(L_Arr,L_Search);
+
+        // binary search
+        // sorted compulsory
+
+        const B_Arr = [10,20,30,40,50,60];
+        const B_Search = 30;
+
+        function BinarySearch(arr,search){
+            
+        }
+        BinarySearch(B_Arr,B_Search);
+
+    </script>
+
+</body>
+
+</html>

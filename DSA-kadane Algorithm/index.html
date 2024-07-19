@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KADANE ALGORITHM</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        const arr1 = [11, 12, 13, 14, 15];
+        const arr2 = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+        let sum = [];
+
+        function Arr_sum(Arr1, Arr2, Sum) {
+            for (let i = 0; i < Arr1.length; i++) {
+                Sum.push(Arr1[i] + Arr2[i]);
+            }
+            return Sum;
+        }
+
+        let print = Arr_sum(arr1, arr2, sum);
+        console.log(print);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        console.log('---- modify array ----');
+
+        console.log('---- by UDF ----');
+        function insert(arr, pos, value) {
+            for (var i = arr.length - 1; i >= pos; i--) {
+                arr[i + 1] = arr[i]
+            }
+            arr[pos] = value
+            return arr;
+        }
+        var a = [10, 20, 40, 50], p = 2, v = 30;
+        var ans = insert(a, p, v);
+        console.log(ans);
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('---- find value & their poition from array ----');
+
+        var arr = [10, 20, 30, 40, 50, 60]
+        var check = null;
+        var findvalue = 30;
+
+        console.log(arr);
+
+        var arrfind = arr.find(rec => rec == findvalue);
+        if (arrfind != null) {
+            console.log('---- by "find" keyword ----');
+            console.log("value :- " + arrfind + "\nposition :- " + arr.indexOf(arrfind));
+        } else {
+            alert("Element not found");
+        }
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] == findvalue) {
+                check = i
+            }
+        }
+        if (check != null) {
+            console.log('---- by for loop  ----');
+            console.log('value :- ' + findvalue + '\n' + "position :- " + check)
+        } else {
+            alert("Element not found")
+        }
+
+        function find(arr, check, find) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == find) {
+                    check = i
+                }
+            }
+            if (check != null) {
+                return "position :- " + check
+            } else {
+                alert("Element not found")
+            }
+        }
+        console.log('---- by UDF ----');
+        console.log('value :- ' + findvalue + '\n' + find(arr, check, findvalue));
+
+        console.log('\n');
+    </script>
+    <script type="text/javascript">
+        console.log('---- merge two array ----');
+
+        var arr = [10, 20, 30]
+        var arr2 = [40, 50, 60]
+        var arr3 = []
+
+        console.log('---- by spread ----');
+        console.log(...arr, ...arr2);
+
+        for (let i = 0; i < arr.length; i++) {
+            arr3[i] = arr[i]
+        }
+        for (let i = 0; i < arr2.length; i++) {
+            arr3[arr.length + i] = arr2[i]
+        }
+        console.log('---- by for loop ----');
+        console.log(arr3);
+
+        console.log('\n');
+    </script>
+
+</body>
+
+</html>
